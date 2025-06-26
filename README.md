@@ -141,16 +141,6 @@ Run: python housing_regression_complete.py
 Outputs:
 Console: MAE, MSE, R² for both models, coefficient table.
 Plots: Simple regression line, multiple regression actual vs. predicted scatter.
-Saved files: housing_model.pkl, housing_model_columns.pkl, housing_scaler.pkl (joblib), and equivalents with _pickle.pkl (pickle).
-
-
-
-
-Model Saving:
-
-Joblib: Saves model, feature columns, and scaler for efficient scikit-learn serialization.
-Pickle: Alternative for compatibility, no external dependencies.
-Use saved files for predictions in other scripts.
 
 
 
@@ -226,7 +216,6 @@ Add a function to predict new house prices (example in code comments):def predic
 Notes
 
 Bool Dtypes: One-hot encoded columns are bool (e.g., mainroad_yes), which is efficient and compatible with LinearRegression. No need to convert to int64/float64.
-Model Saving: joblib is preferred for scikit-learn models; pickle is an alternative.
 Price Scale: Prices are in large units (e.g., Indian Rupees, ~$1.75M–13.3M), leading to large MSE values.
 
 Example Output
